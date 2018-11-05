@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.justin.thompson.studentsched">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="Scheduler"
+        android:supportsRtl="true"
+        android:grantUriPermissions="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Terms"
+            android:label="@string/title_activity_terms"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewTerm"
+            android:label="@string/stringNewTerm"
+            android:parentActivityName=".Terms">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".TermDetail"
+            android:label="Term Detail"
+            android:parentActivityName=".Terms">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".CourseDetail"
+            android:label="Course Detail"
+            android:parentActivityName=".Courses">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".Courses"
+            android:label="Courses"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".NewCourse"
+            android:label="Add Course"
+            android:parentActivityName=".CourseDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".Mentors"
+            android:label="Mentors"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".NewMentor"
+            android:label="New Mentor"
+            android:parentActivityName=".Mentors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".MentorDetail"
+            android:label="Mentor Detail"
+            android:parentActivityName=".Mentors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".Notes"
+            android:label="Notes"
+            android:parentActivityName=".CourseDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".NewNote"
+            android:label="New Note"
+            android:parentActivityName=".Notes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".NoteDetails"
+            android:label="Note Details"
+            android:parentActivityName=".Notes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".Assessments"
+            android:label="Assessments"
+            android:parentActivityName=".CourseDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".AssDetails"
+            android:label="Assessment Details"
+            android:parentActivityName=".Assessments">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <activity
+            android:name=".NewAss"
+            android:label="New Assessment"
+            android:parentActivityName=".Assessments">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Terms" />
+        </activity>
+        <receiver android:name=".CourseNotificationReciever"/>
+        <receiver android:name=".AssNotificationReciever"/>
+    </application>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+</manifest>
